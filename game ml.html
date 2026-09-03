@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobile Legends: Bang Bang</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                darkbg: "#0F172A",
+                darkcard: "#1E293B",
+                neon: "#38BDF8",
+                gold: "#FACC15"
+            }
+        }
+    }
+}
+</script>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+.hero-bg{
+    background:linear-gradient(rgba(15,23,42,.82),rgba(15,23,42,.92)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.card-hover{
+    transition:.35s;
+}
+
+.card-hover:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(56,189,248,.25);
+}
+
+.glow-btn{
+    transition:.3s;
+}
+
+.glow-btn:hover{
+    box-shadow:0 0 18px #38BDF8;
+}
+</style>
+
+</head>
+
+<body class="bg-darkbg text-white">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur shadow-lg z-50">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold text-gold">
+⚔ MLBB Hub
+</h1>
+
+<ul class="hidden md:flex space-x-8 font-medium">
+
+<li><a href="#home" class="hover:text-neon transition">Beranda</a></li>
+
+<li><a href="#hero" class="hover:text-neon transition">Hero Pilihan</a></li>
+
+<li><a href="#rank" class="hover:text-neon transition">Tier & Rank</a></li>
+
+<li><a href="#kontak" class="hover:text-neon transition">Kontak</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center px-6">
+
+<div class="max-w-3xl">
+
+<h2 class="text-5xl md:text-6xl font-bold text-gold mb-6">
+
+Mobile Legends: Bang Bang
+
+</h2>
+
+<p class="text-lg text-gray-300 leading-8 mb-10">
+
+Mobile Legends: Bang Bang adalah game MOBA 5v5 yang menghadirkan pertarungan
+strategis, kerja sama tim, dan ratusan kombinasi hero. Pilih role favoritmu,
+kuasai medan pertempuran, dan raih kemenangan bersama tim.
+
+</p>
+
+<button
+onclick="showMessage()"
+class="glow-btn bg-neon text-slate-900 font-bold px-8 py-4 rounded-lg">
+
+Pelajari Lebih Lanjut
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= HERO ROLE ================= -->
+
+<section id="hero" class="py-20">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center text-gold mb-14">
+
+Hero Populer Berdasarkan Role
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<!-- CARD -->
+
+<div class="card-hover bg-darkcard rounded-xl p-6 text-center">
+
+<div class="w-24 h-24 bg-slate-700 rounded-full mx-auto flex items-center justify-center text-5xl">
+
+🗡
+
+</div>
+
+<h3 class="text-2xl text-neon font-bold mt-6 mb-4">
+
+Assassin
+
+</h3>
+
+<p class="text-gray-300">
+
+Hero dengan mobilitas tinggi dan damage besar yang bertugas menghabisi
+core lawan secara cepat.
+
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card-hover bg-darkcard rounded-xl p-6 text-center">
+
+<div class="w-24 h-24 bg-slate-700 rounded-full mx-auto flex items-center justify-center text-5xl">
+
+🔮
+
+</div>
+
+<h3 class="text-2xl text-neon font-bold mt-6 mb-4">
+
+Mage
+
+</h3>
+
+<p class="text-gray-300">
+
+Mengandalkan kemampuan sihir dengan burst damage dan efek crowd control
+untuk mendominasi pertarungan.
+
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card-hover bg-darkcard rounded-xl p-6 text-center">
+
+<div class="w-24 h-24 bg-slate-700 rounded-full mx-auto flex items-center justify-center text-5xl">
+
+🛡
+
+</div>
+
+<h3 class="text-2xl text-neon font-bold mt-6 mb-4">
+
+Tank
+
+</h3>
+
+<p class="text-gray-300">
+
+Memiliki pertahanan tinggi dan bertugas melindungi rekan satu tim
+serta membuka jalannya pertempuran.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RANK ================= -->
+
+<section id="rank" class="bg-slate-900 py-20">
+
+<div class="max-w-5xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl text-gold font-bold mb-8">
+
+Tier & Rank
+
+</h2>
+
+<p class="text-gray-300 leading-8 max-w-3xl mx-auto">
+
+Dalam Mobile Legends, pemain dapat naik peringkat mulai dari Warrior,
+Elite, Master, Grandmaster, Epic, Legend, Mythic hingga Mythical Glory
+(maupun tingkatan lanjutan pada musim tertentu). Setiap kemenangan akan
+membantu pemain memperoleh bintang atau poin untuk naik ke tier berikutnya.
+
+</p>
+
+<button
+onclick="showRankInfo()"
+class="mt-10 bg-gold text-black font-semibold px-8 py-3 rounded-lg hover:scale-105 transition">
+
+Lihat Tips Rank
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="kontak" class="bg-slate-950 py-8 text-center">
+
+<h3 class="text-xl font-bold text-gold">
+
+MLBB Hub Community
+
+</h3>
+
+<p class="text-gray-400 mt-3">
+
+Discord • Facebook • Instagram (Komunitas Fiktif)
+
+</p>
+
+<p class="text-gray-500 text-sm mt-5">
+
+© 2026 MLBB Hub. Website ini dibuat untuk tujuan edukasi dan demonstrasi.
+
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function showMessage(){
+
+alert(
+"🎮 Selamat Datang di MLBB Hub!\n\n" +
+"Pelajari berbagai role hero, strategi bermain, dan informasi seputar Mobile Legends: Bang Bang."
+);
+
+}
+
+function showRankInfo(){
+
+alert(
+"⭐ Tips Push Rank:\n\n" +
+"• Gunakan hero yang sudah dikuasai.\n" +
+"• Bermain bersama tim.\n" +
+"• Perhatikan objektif seperti Turtle dan Lord.\n" +
+"• Jaga komunikasi selama pertandingan."
+);
+
+}
+
+</script>
+
+</body>
+</html>
